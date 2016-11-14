@@ -10,7 +10,7 @@ import UIKit
 
 class StyleTwoVC: UIViewController,WHC_PageViewDelegate {
 
-    let views = [ContentView(),ContentView(),ContentView(),ContentView(),ContentView(),ContentView(),ContentView()]
+    let views = [ContentView(),ContentView(),ContentView(),ContentView()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
