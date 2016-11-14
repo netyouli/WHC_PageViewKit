@@ -3,7 +3,7 @@ WHC_PageViewKit
 ![Build Status](https://api.travis-ci.org/netyouli/WHC_PageViewKit.svg?branch=master)
 [![Pod Version](http://img.shields.io/cocoapods/v/WHC_PageViewKit.svg?style=flat)](http://cocoadocs.org/docsets/WHC_PageViewKit/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/WHC_PageViewKit.svg?style=flat)](http://cocoadocs.org/docsets/WHC_PageViewKit/)
-[![Pod License](http://img.shields.io/cocoapods/l/WHC_PageViewKit/WHC_PageViewKit.svg?style=flat)](https://opensource.org/licenses/MIT)
+[![Pod License](http://img.shields.io/cocoapods/l/WHC_PageViewKit.svg?style=flat)](https://opensource.org/licenses/MIT)
 简介
 ==============
 - **高效**: 预加载机制
