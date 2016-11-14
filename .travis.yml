@@ -1,4 +1,4 @@
 osx_image: xcode8
-language: Swift3.0
+language: Swift
 xcode_project: WHC_PageViewKit.xcodeproj # path to your xcodeproj folder
 xcode_schemes: WHC_PageViewKit
