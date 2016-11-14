@@ -32,6 +32,7 @@
 		FE10319D1DD870FB00A9F284 /* news_1_check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031971DD870FB00A9F284 /* news_1_check.png */; };
 		FE10319E1DD870FB00A9F284 /* news_1_uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031981DD870FB00A9F284 /* news_1_uncheck.png */; };
 		FE1031A21DD87D1A00A9F284 /* cell.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031A11DD87D1A00A9F284 /* cell.png */; };
+		FE1031A41DD9790B00A9F284 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FE1031A31DD9790B00A9F284 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		FE1031971DD870FB00A9F284 /* news_1_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_1_check.png; sourceTree = "<group>"; };
 		FE1031981DD870FB00A9F284 /* news_1_uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_1_uncheck.png; sourceTree = "<group>"; };
 		FE1031A11DD87D1A00A9F284 /* cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell.png; sourceTree = "<group>"; };
+		FE1031A31DD9790B00A9F284 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		FE1031411DD5B4F400A9F284 /* WHC_PageViewKit */ = {
 			isa = PBXGroup;
 			children = (
+				FE1031A31DD9790B00A9F284 /* README.md */,
 				FE10318E1DD86DAE00A9F284 /* Images */,
 				FE1031851DD86CA700A9F284 /* WHC_AutoLayoutKit */,
 				FE1031541DD5B51400A9F284 /* WHC_PageViewKit */,
@@ -235,6 +238,7 @@
 				FE1031581DD5B51400A9F284 /* WHC_TitlesBar.swift in Sources */,
 				FE10317C1DD853B300A9F284 /* WHC_ExtensionButton.swift in Sources */,
 				FE10317A1DD5C33D00A9F284 /* ContentView.swift in Sources */,
+				FE1031A41DD9790B00A9F284 /* README.md in Sources */,
 				FE10315A1DD5B5D000A9F284 /* WHC_Frame.swift in Sources */,
 				FE1031451DD5B4F400A9F284 /* MainVC.swift in Sources */,
 				FE10318A1DD86CA700A9F284 /* WHC_AutoCellHeight.swift in Sources */,
