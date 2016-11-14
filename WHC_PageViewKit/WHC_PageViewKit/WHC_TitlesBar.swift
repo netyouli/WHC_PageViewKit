@@ -413,6 +413,7 @@ class WHC_TitlesBar: UIView {
         }
         
         var pageIndex = Int(contentOffsetX / self.whc_Width) + 1
+        let currentButton = buttons[pageIndex - 1]
         let rightSwitch = draggingX < 0
         var percent = fabs((cursorMoveOffsetX - tempItemWidth * CGFloat(pageIndex - 1)) / tempItemWidth)
         if rightSwitch && Int(contentOffsetX) % Int(self.whc_Width) == 0 {
@@ -421,7 +422,6 @@ class WHC_TitlesBar: UIView {
                 pageIndex -= 1;
             }
         }
-        let currentButton = buttons[pageIndex - 1]
         if changeTextColor {
             let text_color = UIColor(red: n_t_r * percent + s_t_r * (1 - percent),
                                      green: n_t_g * percent + s_t_g * (1 - percent),
