@@ -32,6 +32,7 @@
 		FE10319D1DD870FB00A9F284 /* news_1_check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031971DD870FB00A9F284 /* news_1_check.png */; };
 		FE10319E1DD870FB00A9F284 /* news_1_uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031981DD870FB00A9F284 /* news_1_uncheck.png */; };
 		FE1031A21DD87D1A00A9F284 /* cell.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031A11DD87D1A00A9F284 /* cell.png */; };
+		FE1031A61DD9840A00A9F284 /* WHC_PageViewKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE1031A51DD9840A00A9F284 /* WHC_PageViewKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		FE1031971DD870FB00A9F284 /* news_1_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_1_check.png; sourceTree = "<group>"; };
 		FE1031981DD870FB00A9F284 /* news_1_uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_1_uncheck.png; sourceTree = "<group>"; };
 		FE1031A11DD87D1A00A9F284 /* cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell.png; sourceTree = "<group>"; };
+		FE1031A51DD9840A00A9F284 /* WHC_PageViewKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WHC_PageViewKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		FE1031361DD5B4F400A9F284 = {
 			isa = PBXGroup;
 			children = (
+				FE1031A51DD9840A00A9F284 /* WHC_PageViewKit.podspec */,
 				FE1031411DD5B4F400A9F284 /* WHC_PageViewKit */,
 				FE1031401DD5B4F400A9F284 /* Products */,
 			);
@@ -218,6 +221,7 @@
 				FE10319C1DD870FB00A9F284 /* my_uncheck.png in Resources */,
 				FE10314A1DD5B4F400A9F284 /* Assets.xcassets in Resources */,
 				FE1031801DD86AD900A9F284 /* StyleOneVC.xib in Resources */,
+				FE1031A61DD9840A00A9F284 /* WHC_PageViewKit.podspec in Resources */,
 				FE1031841DD86AEF00A9F284 /* StyleTwoVC.xib in Resources */,
 				FE1031991DD870FB00A9F284 /* calendar_check.png in Resources */,
 				FE1031A21DD87D1A00A9F284 /* cell.png in Resources */,
