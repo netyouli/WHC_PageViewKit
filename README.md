@@ -17,7 +17,7 @@ WHC_PageViewKit
 集成
 ==============
 * 使用CocoaPods:
--  pod 'WHC_PageViewKit', '~> 1.0.2'
+-  pod 'WHC_PageViewKit', '~> 1.0.3'
 * 手工集成:
 -  导入文件夹WHC_PageViewKit
 
