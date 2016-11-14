@@ -7,7 +7,7 @@ WHC_PageViewKit
 简介
 ==============
 - **高效**: 预加载机制
-- **方便**: 只需要设置简单参数即可构建炫酷的PageView
+- **方便**: 只需要设置简单参数即可构建炫酷的TitleBar和PageView
 - **动画**: 支持翻页TitleBar炫酷动画效果
 - **优势**: TitleBar模块和PageView模块可以单独使用
 - **强大**: TitleBar支持30多种UI样式
@@ -16,11 +16,8 @@ WHC_PageViewKit
 
 使用演示
 ==============
-Time lost (Benchmark 1000 times)
 <img src = "https://github.com/netyouli/WHC_Model/blob/master/Result/b.png">
 <img src = "https://github.com/netyouli/WHC_Model/blob/master/Result/a.png">
-
-* 查看性能测试请运行项目： Benchmark/ModelBenchmark.xcodeproj 
 
 要求
 ==============
@@ -36,110 +33,77 @@ Time lost (Benchmark 1000 times)
 
 用法
 ==============
+*  创建PageView
+```Swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    let pageView = WHC_PageView()
+    pageView.delegate = self
+    self.view.addSubview(pageView)
+    pageView.whc_Left(0)
+    .whc_Top(0)
+    .whc_Right(0)
+    .whc_Bottom(0)
 
-###一,json -> model
-```Objective-C
-/// jsonString 是一个比较复杂3000行的json文件，具体参考demo
-    ModelObject * model = [ModelObject whc_ModelWithJson:jsonString];
-    NSLog(@"model = %@\n\n\n",model);
+    let layoutParam = WHC_PageViewLayoutParam()
+    layoutParam.titles = ["新闻","外汇","黄金","原油","白银","股票","现货"]
+    layoutParam.itemWidth = 80 /***如果标题很多一屏放不下需要设定每个标题的固定宽度否则可以忽略***/
+    layoutParam.selectedTextColor = UIColor.orange
+    layoutParam.normalBackgorundColor = UIColor.white
+    layoutParam.normalTextColor = UIColor.black
+    layoutParam.selectedBackgorundColor = UIColor.gary
+
+    pageView.layoutIfNeeded()
+    pageView.layoutParam = layoutParam
+}
+
+//MARK: - WHC_PageViewDelegate -
+func whcPageViewStartLoadingViews() -> [UIView]! {
+    return views
+}
+
+func whcPageView(pageView: WHC_PageView, willUpdateView view: UIView, index: Int) {
+    print("更新当前视图")
+}
+
 ```
 
-###二,model -> json
-```Objective-C
-    NSString * modelString = [model whc_Json];
-    NSLog(@"modelString = %@\n\n\n",modelString);
+* 单独创建TitleBar
+```Swift 
+override func viewDidLoad() {
+    super.viewDidLoad()
+    let bottomBar = WHC_TitlesBar()
+    self.view.addSubview(bottomBar)
+    bottomBar.whc_Left(0)
+    .whc_Right(0)
+    .whc_BaseLine(0)
+    .whc_Height(50)
+
+    /// 设置底部bar的样式
+    let layoutParam = WHC_TitlesBarLayoutParam()
+    layoutParam.titles = ["样式","样式二","Android","iOS"]
+    layoutParam.images = images
+    layoutParam.selectedImages = selectedImages
+    layoutParam.bottomLineHeight = WHC_TitlesBarLayoutParam.kNotCreateLine
+    layoutParam.hasBottomCursor = false
+    layoutParam.topLineHeight = 0.5
+    layoutParam.normalFont = UIFont.systemFont(ofSize: 10)
+    layoutParam.selectedFont = UIFont.systemFont(ofSize: 10)
+    layoutParam.selectedTextColor = UIColor.gray
+    layoutParam.itemTextImageMargin = 3
+    layoutParam.defaultSelectIndex = 0
+    layoutParam.itemImageSize = CGSize(width: 25, height: 25)
+    layoutParam.itemLayoutStyle = .Image_Top_Text_Bottom
+    bottomBar.layoutIfNeeded()
+    bottomBar.layoutParam = layoutParam
+
+    /// 设置点击回调
+    bottomBar.clickButtonCallback = {(index: Int) in
+
+    }
+}
 ```
 
-###三,model - > NSDictionary
-```Objective-C
-    NSDictionary * modelDict = [model whc_Dictionary];
-    NSLog(@"modelDict = %@\n\n\n",modelDict);
-```
-
-###四,指定路径只解析Head对象
-```Objective-C
-    Head * head = [Head whc_ModelWithJson:jsonString keyPath:@"Head"];
-    NSLog(@"head = %@\n\n\n",head);
-```
-
-###五,指定路径只解析ResponseBody对象
-```Objective-C
-    ResponseBody * body = [ResponseBody whc_ModelWithJson:jsonString keyPath:@"ResponseBody"];
-    NSLog(@"ResponseBody = %@\n\n\n",body);
-```
-
-###六,指定路径只解析PolicyRuleList集合中第一个对象
-```Objective-C
-    PolicyRuleList * rule = [PolicyRuleList whc_ModelWithJson:jsonString keyPath:@"ResponseBody.PolicyRuleList[0]"];
-    NSLog(@"rule = %@\n\n\n",rule);
-```
-###七,归档对象
-```Objective-C
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:body];
-    NSLog(@"data = %@\n\n\n",data);
-```
-
-###八,解归档对象
-```Objective-C
-    ResponseBody * body = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSLog(@"body = %@\n\n\n",body);
-```
-###九,模型对象复制
-```Objective-C
-    ResponseBody * copyBody = body.copy;
-    NSLog(@"copyBody = %@",copyBody);
-```
-
-推荐
-==============
-- WHC_DataModelFactory mac工具github地址：https://github.com/netyouli/WHC_DataModelFactory
-
-文档
-==============
-```Objective-C
-
-#pragma mark - json转模型对象 Api -
-
-/** 说明:把json解析为模型对象
- *@param json :json数据对象
- *@return 模型对象
- */
-+ (id)whc_ModelWithJson:(id)json;
-
-/** 说明:把json解析为模型对象
- *@param json :json数据对象
- *@param keyPath :json key的路径
- *@return 模型对象
- */
-
-+ (id)whc_ModelWithJson:(id)json keyPath:(NSString *)keyPath;
-
-
-#pragma mark - 模型对象转json Api -
-
-/** 说明:把模型对象转换为字典
- *@return 字典对象
- */
-
-- (NSDictionary *)whc_Dictionary;
-
-/** 说明:把模型对象转换为json字符串
- *@return json字符串
- */
-
-- (NSString *)whc_Json;
-
-#pragma mark - 模型对象序列化 Api -
-
-/// 复制模型对象
-- (id)whc_Copy;
-
-/// 序列化模型对象
-- (void)whc_Encode:(NSCoder *)aCoder;
-
-/// 反序列化模型对象
-- (void)whc_Decode:(NSCoder *)aDecoder;
-```
 ## <a id="期待"></a>期待
 
 - 如果您在使用过程中有任何问题，欢迎issue me! 很乐意为您解答任何相关问题!
