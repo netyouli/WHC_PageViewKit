@@ -157,12 +157,12 @@ class WHC_TitlesBar: UIView {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         self.addSubview(scrollView)
-        backView = UIView(frame: bounds)
+        backView = UIView(frame: scrollView.bounds)
         scrollView.addSubview(backView)
         self.backgroundColor = layoutParam.backgroundColor
         backView.backgroundColor = layoutParam.backgroundColor
         if layoutParam.titles != nil {
-            let selfWidth = bounds.width
+            let selfWidth = min(bounds.width, self.whc_ScreenWidth)
             let selfHeight = bounds.height
             let titleCount = layoutParam.titles.count
             var itemHeight: CGFloat = 0

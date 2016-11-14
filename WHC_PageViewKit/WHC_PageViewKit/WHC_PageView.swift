@@ -117,7 +117,7 @@ class WHC_PageView: UIView, UIScrollViewDelegate {
             self.isGotoClick = false
         }
         self.addSubview(titleBar)
-        scrollView = UIScrollView(frame: CGRect(x: 0,y: titleBar.whc_MaxY,width: self.whc_Width,height: self.whc_Height - titleBar.whc_MaxY - heightDiff))
+        scrollView = UIScrollView(frame: CGRect(x: 0,y: titleBar.whc_MaxY,width: min(self.whc_Width, self.whc_ScreenWidth),height: self.whc_Height - titleBar.whc_MaxY - heightDiff))
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
