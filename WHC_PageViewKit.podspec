@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author             = { "吴海超(WHC)" => "712641411@qq.com" }
 
   s.platform     = :ios
-  s.platform     = :ios, "6.0"
+  s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/netyouli/WHC_PageViewKit.git", :tag => "1.0.0"}
 
