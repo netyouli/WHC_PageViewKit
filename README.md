@@ -14,6 +14,13 @@ WHC_PageViewKit
 - **咨询**: 712641411
 - **作者**: 吴海超
 
+集成
+==============
+* 使用CocoaPods:
+-  pod 'WHC_PageViewKit', '~> 1.0.0'
+* 手工集成:
+-  导入文件夹WHC_PageViewKit
+
 使用演示
 ==============
 <img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/pageView.gif" width = "375"><img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/note.png" width = "375">
@@ -23,13 +30,6 @@ WHC_PageViewKit
 ==============
 * iOS 8.0 or later
 * Xcode 8.0 or later
-
-集成
-==============
-* 使用CocoaPods:
-  -  pod 'WHC_PageViewKit', '~> 1.0.0'
-* 手工集成:
-  -  导入文件夹WHC_PageViewKit
 
 用法
 ==============
