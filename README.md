@@ -17,6 +17,7 @@ WHC_PageViewKit
 使用演示
 ==============
 <img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/pageView.gif" width = "375"><img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/note.png" width = "375">
+<img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/a.png" width = "375"><img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/b.png" width = "375">
 
 要求
 ==============
