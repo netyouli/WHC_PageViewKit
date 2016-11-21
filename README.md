@@ -25,7 +25,7 @@ WHC_PageViewKit
 
 使用第三方库
 ==============
-* [WHC_AutoLayoutKit](https://github.com/netyouli/WHC_AutoLayoutKit)</br>
+* 超好用自动布局库[WHC_AutoLayoutKit](https://github.com/netyouli/WHC_AutoLayoutKit)</br>
 
 使用演示
 ==============
