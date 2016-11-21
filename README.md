@@ -23,6 +23,10 @@ WHC_PageViewKit
 * 手工集成:
 -  导入文件夹WHC_PageViewKit
 
+使用第三方库
+==============
+* [WHC_AutoLayoutKit](https://github.com/netyouli/WHC_AutoLayoutKit)</br>
+
 使用演示
 ==============
 <img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/pageView.gif" width = "375"><img src = "https://github.com/netyouli/WHC_PageViewKit/blob/master/gif/note.png" width = "375">

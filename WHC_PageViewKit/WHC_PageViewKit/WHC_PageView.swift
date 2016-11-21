@@ -41,7 +41,7 @@ class WHC_PageViewLayoutParam: WHC_TitlesBarLayoutParam {
     var canChangeBackColor = true
 }
 
-/// HZPageView视图代理
+/// WHC_PageView视图代理
 @objc protocol WHC_PageViewDelegate {
     /**
      说明:开始加载视图
@@ -77,6 +77,7 @@ class WHC_PageView: UIView, UIScrollViewDelegate {
         }
     }
     
+    /// 设置代理
     weak var delegate: WHC_PageViewDelegate! {
         didSet {
             if layoutParam != nil {
