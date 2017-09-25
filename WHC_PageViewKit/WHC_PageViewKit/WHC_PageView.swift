@@ -27,6 +27,7 @@
 // THE SOFTWARE.
 
 import UIKit
+import WHC_Layout
 
 public class WHC_PageViewLayoutParam: WHC_TitlesBarLayoutParam {
     /// 标题栏高度
