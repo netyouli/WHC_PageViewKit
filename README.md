@@ -11,9 +11,13 @@ WHC_PageViewKit
 - **方便**: 只需要设置简单参数即可构建炫酷的TitleBar和PageView
 - **动画**: 支持翻页TitleBar炫酷动画效果
 - **优势**: TitleBar模块和PageView模块可以单独使用
-- **强大**: TitleBar支持30多种UI样式
+- **强大**: TitleBar支持多种UI样式
 - **咨询**: 712641411
 - **作者**: 吴海超
+
+NOTE
+==============
+**升级修改模块public权限**
 
 集成
 ==============
