@@ -42,14 +42,14 @@ class ContentView: UIView , UITableViewDelegate, UITableViewDataSource {
             imageView.whc_Left(0)
             .whc_Right(0)
             .whc_Top(0)
-            .whc_Height(self.whc_ScreenWidth * (image.size.height / image.size.width))
+            .whc_Height(self.whc_sw * (image.size.height / image.size.width))
         }
         cell?.selectionStyle = .none
         return cell!
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.whc_ScreenWidth * (image.size.height / image.size.width)
+        return self.whc_sw * (image.size.height / image.size.width)
         
     }
     

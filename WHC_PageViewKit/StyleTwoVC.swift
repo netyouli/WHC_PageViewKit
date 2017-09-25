@@ -17,7 +17,7 @@ class StyleTwoVC: UIViewController,WHC_PageViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.edgesForExtendedLayout = []
         // Do any additional setup after loading the view.
         pageView.delegate = self
         self.view.addSubview(pageView)
@@ -28,6 +28,7 @@ class StyleTwoVC: UIViewController,WHC_PageViewDelegate {
         
         layoutParam.titles = ["原油","白银","股票","现货"]
 //        layoutParam.itemWidth = 80   /// 由于只有四个标题一屏幕放得下所以该参数可以忽略
+        layoutParam.canChangeBackColor = true
         layoutParam.selectedTextColor = UIColor.orange
         layoutParam.normalBackgorundColor = UIColor.white
         layoutParam.normalTextColor = UIColor.black

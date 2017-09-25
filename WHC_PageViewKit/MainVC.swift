@@ -16,11 +16,12 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.edgesForExtendedLayout = []
         currentView = vcs.first!.view
         self.view.addSubview(currentView)
         self.navigationItem.title = "样式一"
         currentView.whc_Left(0)
-                    .whc_Top(64)
+                    .whc_Top(0)
                     .whc_Right(0)
                     .whc_Bottom(50)
         
@@ -28,7 +29,7 @@ class MainVC: UIViewController {
         self.view.addSubview(bottomBar)
         bottomBar.whc_Left(0)
                 .whc_Right(0)
-                .whc_BaseLine(0)
+                .whc_Bottom(0)
                 .whc_Height(50)
         
         
@@ -59,7 +60,7 @@ class MainVC: UIViewController {
         layoutParam.itemTextImageMargin = 3
         layoutParam.defaultSelectIndex = 0
         layoutParam.itemImageSize = CGSize(width: 25, height: 25)
-        layoutParam.itemLayoutStyle = .Image_Top_Text_Bottom
+        layoutParam.itemLayoutStyle = .image_Top_Text_Bottom
         bottomBar.layoutIfNeeded()
         bottomBar.layoutParam = layoutParam
         
@@ -69,18 +70,18 @@ class MainVC: UIViewController {
             case 0:
                 self.navigationItem.title = "样式"
                 if self.currentView !== self.vcs.first!.view {
-                    self.currentView.removeFromSuperview()
+                    self.currentView.whc_ResetConstraints().removeFromSuperview()
                     self.currentView = self.vcs.first!.view
                     self.view.addSubview(self.currentView)
-                    self.currentView.whc_AutoSize(left: 0, top: 64, right: 0, bottom: 50)
+                    self.currentView.whc_AutoSize(left: 0, top: 0, right: 0, bottom: 50)
                 }
             case 1:
                 self.navigationItem.title = "样式二"
                 if self.currentView !== self.vcs[1].view {
-                    self.currentView.removeFromSuperview()
+                    self.currentView.whc_ResetConstraints().removeFromSuperview()
                     self.currentView = self.vcs[1].view
                     self.view.addSubview(self.currentView)
-                    self.currentView.whc_AutoSize(left: 0, top: 64, right: 0, bottom: 50)
+                    self.currentView.whc_AutoSize(left: 0, top: 0, right: 0, bottom: 50)
                 }
             default:
                 UIAlertView(title: "WHC", message: "暂未开放", delegate: nil, cancelButtonTitle: "OK").show()

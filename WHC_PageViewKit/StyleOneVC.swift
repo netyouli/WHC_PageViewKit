@@ -19,6 +19,7 @@ class StyleOneVC: UIViewController,WHC_PageViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.edgesForExtendedLayout = []
         pageView.delegate = self
         self.view.addSubview(pageView)
         pageView.whc_Left(0)
@@ -28,6 +29,7 @@ class StyleOneVC: UIViewController,WHC_PageViewDelegate {
         
         layoutParam.titles = ["新闻","外汇","黄金","原油","白银","股票","现货"]
         layoutParam.itemWidth = 80 /***如果标题很多一屏放不下需要设定每个标题的固定宽度否则可以忽略***/
+        layoutParam.canChangeBackColor = true
         layoutParam.selectedTextColor = UIColor.orange
         layoutParam.normalBackgorundColor = UIColor.white
         layoutParam.normalTextColor = UIColor.black
@@ -57,7 +59,7 @@ class StyleOneVC: UIViewController,WHC_PageViewDelegate {
         return views
     }
     
-    func whcPageView(pageView: WHC_PageView, willUpdateView view: UIView, index: Int) {
+    func whcPageView(_ pageView: WHC_PageView, willUpdateView view: UIView, index: Int) {
         print("更新当前视图")
     }
 

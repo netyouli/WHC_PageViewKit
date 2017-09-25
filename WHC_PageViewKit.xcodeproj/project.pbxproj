@@ -13,7 +13,6 @@
 		FE10314D1DD5B4F400A9F284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE10314B1DD5B4F400A9F284 /* LaunchScreen.storyboard */; };
 		FE1031571DD5B51400A9F284 /* WHC_PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1031551DD5B51400A9F284 /* WHC_PageView.swift */; };
 		FE1031581DD5B51400A9F284 /* WHC_TitlesBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1031561DD5B51400A9F284 /* WHC_TitlesBar.swift */; };
-		FE10315A1DD5B5D000A9F284 /* WHC_Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1031591DD5B5D000A9F284 /* WHC_Frame.swift */; };
 		FE10317A1DD5C33D00A9F284 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1031791DD5C33D00A9F284 /* ContentView.swift */; };
 		FE10317C1DD853B300A9F284 /* WHC_ExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10317B1DD853B300A9F284 /* WHC_ExtensionButton.swift */; };
 		FE10317F1DD86AD900A9F284 /* StyleOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10317D1DD86AD900A9F284 /* StyleOneVC.swift */; };
@@ -33,6 +32,7 @@
 		FE10319E1DD870FB00A9F284 /* news_1_uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031981DD870FB00A9F284 /* news_1_uncheck.png */; };
 		FE1031A21DD87D1A00A9F284 /* cell.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1031A11DD87D1A00A9F284 /* cell.png */; };
 		FE1031A61DD9840A00A9F284 /* WHC_PageViewKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE1031A51DD9840A00A9F284 /* WHC_PageViewKit.podspec */; };
+		FEF97DAD1F738603004A3BF6 /* WHC_Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97DAC1F738603004A3BF6 /* WHC_Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,6 @@
 		FE10314E1DD5B4F400A9F284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1031551DD5B51400A9F284 /* WHC_PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_PageView.swift; sourceTree = "<group>"; };
 		FE1031561DD5B51400A9F284 /* WHC_TitlesBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_TitlesBar.swift; sourceTree = "<group>"; };
-		FE1031591DD5B5D000A9F284 /* WHC_Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_Frame.swift; sourceTree = "<group>"; };
 		FE1031791DD5C33D00A9F284 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE10317B1DD853B300A9F284 /* WHC_ExtensionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_ExtensionButton.swift; sourceTree = "<group>"; };
 		FE10317D1DD86AD900A9F284 /* StyleOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleOneVC.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		FE1031981DD870FB00A9F284 /* news_1_uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_1_uncheck.png; sourceTree = "<group>"; };
 		FE1031A11DD87D1A00A9F284 /* cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell.png; sourceTree = "<group>"; };
 		FE1031A51DD9840A00A9F284 /* WHC_PageViewKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WHC_PageViewKit.podspec; sourceTree = "<group>"; };
+		FEF97DAC1F738603004A3BF6 /* WHC_Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_Frame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,6 @@
 		FE1031541DD5B51400A9F284 /* WHC_PageViewKit */ = {
 			isa = PBXGroup;
 			children = (
-				FE1031591DD5B5D000A9F284 /* WHC_Frame.swift */,
 				FE1031551DD5B51400A9F284 /* WHC_PageView.swift */,
 				FE1031561DD5B51400A9F284 /* WHC_TitlesBar.swift */,
 				FE10317B1DD853B300A9F284 /* WHC_ExtensionButton.swift */,
@@ -128,6 +127,7 @@
 		FE1031851DD86CA700A9F284 /* WHC_AutoLayoutKit */ = {
 			isa = PBXGroup;
 			children = (
+				FEF97DAC1F738603004A3BF6 /* WHC_Frame.swift */,
 				FE1031861DD86CA700A9F284 /* WHC_AutoCellHeight.swift */,
 				FE1031871DD86CA700A9F284 /* WHC_AutoLayout.swift */,
 				FE1031891DD86CA700A9F284 /* WHC_StackView.swift */,
@@ -239,12 +239,12 @@
 				FE1031581DD5B51400A9F284 /* WHC_TitlesBar.swift in Sources */,
 				FE10317C1DD853B300A9F284 /* WHC_ExtensionButton.swift in Sources */,
 				FE10317A1DD5C33D00A9F284 /* ContentView.swift in Sources */,
-				FE10315A1DD5B5D000A9F284 /* WHC_Frame.swift in Sources */,
 				FE1031451DD5B4F400A9F284 /* MainVC.swift in Sources */,
 				FE10318A1DD86CA700A9F284 /* WHC_AutoCellHeight.swift in Sources */,
 				FE1031831DD86AEF00A9F284 /* StyleTwoVC.swift in Sources */,
 				FE10318B1DD86CA700A9F284 /* WHC_AutoLayout.swift in Sources */,
 				FE10318D1DD86CA700A9F284 /* WHC_StackView.swift in Sources */,
+				FEF97DAD1F738603004A3BF6 /* WHC_Frame.swift in Sources */,
 				FE1031431DD5B4F400A9F284 /* AppDelegate.swift in Sources */,
 				FE10317F1DD86AD900A9F284 /* StyleOneVC.swift in Sources */,
 			);
@@ -365,7 +365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WHC.WHC-PageViewKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -379,7 +379,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WHC.WHC-PageViewKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -402,6 +402,7 @@
 				FE1031531DD5B4F400A9F284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
