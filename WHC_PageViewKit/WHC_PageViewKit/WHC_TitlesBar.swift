@@ -269,7 +269,7 @@ public class WHC_TitlesBar: UIView {
             for text in layoutParam.highlightTexts {
                 if title.contains(text) {
                     let attrTitle = NSMutableAttributedString(string: title)
-                    attrTitle.addAttribute(NSAttributedStringKey.foregroundColor, value: layoutParam.highlightTextColor, range: NSMakeRange(title.characters.count - text.characters.count, text.characters.count))
+                    attrTitle.addAttribute(NSAttributedStringKey.foregroundColor, value: layoutParam.highlightTextColor, range: NSMakeRange(title.count - text.count, text.count))
                     button.setAttributedTitle(attrTitle, for: .normal)
                     button.setAttributedTitle(attrTitle, for: .selected)
                     break

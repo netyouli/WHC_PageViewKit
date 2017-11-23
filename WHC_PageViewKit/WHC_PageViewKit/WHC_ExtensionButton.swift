@@ -76,7 +76,7 @@ public extension UIButton {
     }
     
     public func titleSize() -> CGSize {
-        if self.currentTitle?.characters.count > 0 {
+        if let title = self.currentTitle, !title.isEmpty {
             if self.currentAttributedTitle?.length > 0 {
                 let drawingOptions = NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue | NSStringDrawingOptions.usesFontLeading.rawValue)
                 return (self.currentAttributedTitle?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT)), options: drawingOptions, context: nil).size)!

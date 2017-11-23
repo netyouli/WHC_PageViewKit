@@ -57,7 +57,7 @@ class StyleTwoVC: UIViewController,WHC_PageViewDelegate {
         return views
     }
     
-    func whcPageView(pageView: WHC_PageView, willUpdateView view: UIView, index: Int) {
+    private func whcPageView(pageView: WHC_PageView, willUpdateView view: UIView, index: Int) {
         print("更新当前视图")
     }
 
